@@ -1,4 +1,5 @@
-#include <stdio.h>
+
+retu#include <stdio.h>
 #include <stdlib.h>
 
 int main(){
@@ -15,6 +16,7 @@ int main(){
 
     if(d > 31 || m > 12 || a < 1900){
         printf("Data inválida, insira novamente.\n");
+        return 1;
     }
 
     printf("-------------------------------\n");
