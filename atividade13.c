@@ -13,9 +13,9 @@ int main()
     resto = valor % 2;
 
     if (resto == 0) {
-        printf("Este número é PAR.\n");
+        printf("Este número é par.\n");
     } else {
-        printf("Este número é ÍMPAR.\n");
+        printf("Este número é impar.\n");
     }
 
     return 0;
