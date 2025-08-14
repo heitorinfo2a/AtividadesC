@@ -1,39 +1,44 @@
 #include <stdio.h>
 
 int main() {
-    int escolha;
-    float numA, numB;
+    int opcao;
+    float num1, num2, resultado;
 
-    printf("Escolha a operacao:\n");
-    printf("1 - Soma\n");
+    printf("=== MENU DE OPERACOES ===\n");
+    printf("1 - Adicao\n");
     printf("2 - Subtracao\n");
     printf("3 - Multiplicacao\n");
     printf("4 - Divisao\n");
-    printf("Opcao: ");
-    scanf("%d", &escolha);
-
-    printf("Digite o primeiro valor: ");
-    scanf("%f", &numA);
-    printf("Digite o segundo valor: ");
-    scanf("%f", &numB);
-
-    if (escolha == 1) {
-        printf("Resultado: %.2f\n", numA + numB);
-    }
-    else if (escolha == 2) {
-        printf("Resultado: %.2f\n", numA - numB);
-    }
-    else if (escolha == 3) {
-        printf("Resultado: %.2f\n", numA * numB);
-    }
-    else if (escolha == 4) {
-        if (numB != 0)
-            printf("Resultado: %.2f\n", numA / numB);
-        else
-            printf("Erro: divisao por zero!\n");
-    }
-    else {
-        printf("Opcao invalida!\n");
+    printf("=========================\n");
+    
+    printf("Escolha uma opcao (1 a 4): ");
+    scanf("%d", &opcao);
+    
+    if (opcao >= 1 && opcao <= 4) {
+        printf("Digite o primeiro numero: ");
+        scanf("%f", &num1);
+        printf("Digite o segundo numero: ");
+        scanf("%f", &num2);
+        
+        if (opcao == 1) {
+            resultado = num1 + num2;
+            printf("Resultado: %.2f\n", resultado);
+        } else if (opcao == 2) {
+            resultado = num1 - num2;
+            printf("Resultado: %.2f\n", resultado);
+        } else if (opcao == 3) {
+            resultado = num1 * num2;
+            printf("Resultado: %.2f\n", resultado);
+        } else if (opcao == 4) {
+            if (num2 == 0) {
+                printf("Erro: divisao por zero!\n");
+            } else {
+                resultado = num1 / num2;
+                printf("Resultado: %.2f\n", resultado);
+            }
+        }
+    } else {
+        printf("Opcao invalida.\n");
     }
 
     return 0;
