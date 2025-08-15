@@ -8,7 +8,7 @@ int main() {
     printf("Digite sua idade (short): ");
     scanf("%hd", &anos);
     
-    if (anos < 18 || anos > 100) {
+    if (anos < 18 || anos > 110) {
         printf("Erro! Insira uma idade válida.");
     }
     
